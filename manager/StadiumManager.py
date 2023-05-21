@@ -9,4 +9,4 @@ class StadiumManager:
         return [complex for complex in self.sport_complex_list if complex.current_attendance < current_attendance]
 
     def find_all_more_capacity_than(self, capacity):
-        return [complex for complex in self.sport_complex_list if complex.current_attendance < current_attendance]
+        return [complex for complex in self.sport_complex_list if complex.capacity < capacity]

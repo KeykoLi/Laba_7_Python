@@ -29,9 +29,6 @@ class Stadium(AbstractStadium):
     def change_away_team(self, team_name):
         self.away_team = team_name
 
-    def __str__(self):
-        return f"{self.__class__.__name__}: {self.__dict__}"
-
     @staticmethod
     def get_instance():
         if Stadium.__instance is None:

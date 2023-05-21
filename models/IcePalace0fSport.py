@@ -10,8 +10,7 @@ class IcePalaceOfSport(AbstractStadium):
 
     __instance = None
 
-    def __str__(self):
-        return f"{self.__class__.__name__}: {self.__dict__}"
+
 
     @staticmethod
     def get_instance():
