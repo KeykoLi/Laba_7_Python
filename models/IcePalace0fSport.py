@@ -1,6 +1,10 @@
 from models.AbstractStadium import AbstractStadium
+
+
 class IcePalaceOfSport(AbstractStadium):
-    def __init__(self, name, capacity, current_attendance, cover, closed_type, curling, hockey, figure_skating):
+
+    def __init__(self, name, capacity, current_attendance, cover,
+                 closed_type, curling, hockey, figure_skating):
         super().__init__(name, capacity, current_attendance)
         self.cover = cover
         self.closed_type = closed_type
@@ -10,8 +14,6 @@ class IcePalaceOfSport(AbstractStadium):
 
     __instance = None
 
-
-
     @staticmethod
     def get_instance():
         if IcePalaceOfSport.__instance is None:
@@ -20,9 +22,7 @@ class IcePalaceOfSport(AbstractStadium):
 
     def get_supported_sports(self):
         supported_sports = list()
-        if self.curling: supported_sports.add("Curling")
-
-        if self.hockey: supported_sports.add("Hockey")
-
-        if self.figure_skating: supported_sports.add("Figure skating")
+        if self.curling: supported_sports.append("Curling")
+        if self.hockey: supported_sports.append("Hockey")
+        if self.figure_skating: supported_sports.append("Figure skating")
         return supported_sports

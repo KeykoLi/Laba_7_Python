@@ -1,7 +1,11 @@
 from models.AbstractStadium import AbstractStadium
+
+
 class SwimmingPool(AbstractStadium):
-    def __init__(self, name, capacity, current_attendance, number_of_shower_rooms, volume,max_number_of_participants,
-                 springboard_jumping,artistic_swimming, complex_swimming):
+
+    def __init__(self, name, capacity, current_attendance, number_of_shower_rooms,
+                 volume, max_number_of_participants, springboard_jumping,
+                 artistic_swimming, complex_swimming):
         super().__init__(name, capacity, current_attendance)
         self.number_of_shower_rooms = number_of_shower_rooms
         self.volume = volume
@@ -20,9 +24,7 @@ class SwimmingPool(AbstractStadium):
 
     def get_supported_sports(self):
         supported_sports = list()
-        if self.springboard_jumping: supported_sports.add("springboard_jumping");
-
-        if self.artistic_swimming: supported_sports.add("artistic_swimming")
-
-        if self.complex_swimming: supported_sports.add("complex_swimming")
+        if self.springboard_jumping: supported_sports.append("springboard_jumping")
+        if self.artistic_swimming: supported_sports.append("artistic_swimming")
+        if self.complex_swimming: supported_sports.append("complex_swimming")
         return supported_sports

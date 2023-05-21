@@ -2,8 +2,9 @@ from models.AbstractStadium import AbstractStadium
 
 
 class Gym(AbstractStadium):
-    def __init__(self, name, capacity, current_attendance, number_of_shower_rooms, square, volleyball, basketball,
-                 handball, karate):
+
+    def __init__(self, name, capacity, current_attendance, number_of_shower_rooms,
+                 square, volleyball, basketball, handball, karate):
         super().__init__(name, capacity, current_attendance)
         self.numberOfShowerRooms = number_of_shower_rooms
         self.square = square
@@ -22,11 +23,8 @@ class Gym(AbstractStadium):
 
     def get_supported_sports(self):
         supported_sports = list()
-        if self.volleyball: supported_sports.add("Volleyball")
-
-        if self.basketball: supported_sports.add("Skating");
-
-        if self.handball: supported_sports.add("Handball")
-
-        if self.karate: supported_sports.add("Karate")
+        if self.volleyball: supported_sports.append("Volleyball")
+        if self.basketball: supported_sports.append("Skating")
+        if self.handball: supported_sports.append("Handball")
+        if self.karate: supported_sports.append("Karate")
         return supported_sports

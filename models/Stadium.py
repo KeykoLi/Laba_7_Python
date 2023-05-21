@@ -3,6 +3,7 @@ from models.AbstractStadium import AbstractStadium
 
 
 class Stadium(AbstractStadium):
+
     def __init__(self, name, capacity, current_attendance, home_team="empty", away_team="empty", bicycle_track=False, skating_sport=False,
                  football=False, athletics=False):
         super().__init__(name, capacity, current_attendance)
@@ -37,11 +38,8 @@ class Stadium(AbstractStadium):
 
     def get_supported_sports(self):
         supported_sports = list()
-        if self.bicycle_track: supported_sports.add("Bicycle races")
-
-        if self.skatingSport: supported_sports.add("Skating")
-
-        if self.football: supported_sports.add("Football")
-
-        if self.athletics: supported_sports.add("Athletics")
+        if self.bicycle_track: supported_sports.append("Bicycle races")
+        if self.skatingSport: supported_sports.append("Skating")
+        if self.football: supported_sports.append("Football")
+        if self.athletics: supported_sports.append("Athletics")
         return supported_sports
