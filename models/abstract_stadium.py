@@ -1,8 +1,9 @@
+"""Module that stores model of abstract stadium"""
 from abc import ABC, abstractmethod
 
 
 class AbstractStadium(ABC):
-
+    """Class representing abstract stadium"""
     def __init__(self, name="empty", capacity=0, current_attendance=0):
         self.name = name
         self.capacity = capacity
@@ -13,4 +14,4 @@ class AbstractStadium(ABC):
 
     @abstractmethod
     def get_supported_sports(self):
-        pass
+        """Abstract method  that add to list sport what complex supported"""
