@@ -15,3 +15,6 @@ class AbstractStadium(ABC):
     @abstractmethod
     def get_supported_sports(self):
         """Abstract method  that add to list sport what complex supported"""
+
+    def get_attributes_by_type(self, data_type):
+        return {key: value for key, value in self.__dict__.items() if isinstance(value, data_type)}
