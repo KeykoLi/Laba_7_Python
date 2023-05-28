@@ -17,6 +17,8 @@ class Gym(AbstractStadium):
         self.handball = handball
         self.karate = karate
 
+    set_facilities = {"treadmills", "weights", "exercise bikes"}
+
     __instance = None
 
     @staticmethod

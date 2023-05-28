@@ -17,6 +17,8 @@ class Stadium(AbstractStadium):
         self.football = football
         self.athletics = athletics
 
+    set_facilities = {"seating area", "field", "scoreboard"}
+
     __instance = None
 
     def add_attendance(self, count):

@@ -17,6 +17,8 @@ class SwimmingPool(AbstractStadium):
         self.artistic_swimming = artistic_swimming
         self.complex_swimming = complex_swimming
 
+    set_facilities = {"swimming lanes", "diving boards", "showers"}
+
     __instance = None
 
     @staticmethod

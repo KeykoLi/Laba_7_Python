@@ -12,13 +12,12 @@ class SetManager:
         self.manager_object = manager_object
 
     def __iter__(self):
-        self.iter_list = [sport_complex.set_facilities
-                          for sport_complex in self.manager_object.sport_complex_list]
+        self.iter_list = [sport_complex.set_facilities for sport_complex in self.manager_object]
         return iter(self.iter_list)
 
     def __len__(self):
         return sum(len(sport_complex.set_facilities)
-                   for sport_complex in self.manager_object.sport_complex_list)
+                   for sport_complex in self.manager_object)
 
     def __getitem__(self, item):
         for sport_complex in self.manager_object.sport_complex_list:

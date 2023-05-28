@@ -15,6 +15,8 @@ class IcePalaceOfSport(AbstractStadium):
         self.hockey = hockey
         self.figure_skating = figure_skating
 
+    set_facilities = {"ice rink", "hockey nets", "locker rooms"}
+
     __instance = None
 
     @staticmethod
