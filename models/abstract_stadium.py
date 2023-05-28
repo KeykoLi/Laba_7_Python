@@ -9,6 +9,8 @@ class AbstractStadium(ABC):
         self.capacity = capacity
         self.current_attendance = current_attendance
 
+    set_facilities = {}
+
     def __str__(self):
         return f"{self.__class__.__name__}: {self.__dict__}"
 
