@@ -3,7 +3,7 @@ from models.abstract_stadium import AbstractStadium
 
 
 class SwimmingPool(AbstractStadium):
-    """Class representing a swimming pool"""
+    """Class representing  swimming pool"""
 
     # pylint: disable = (too-many-arguments)
     def __init__(self, name="empty", capacity=0, current_attendance=0,

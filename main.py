@@ -1,5 +1,5 @@
 """Module main"""
-from manager.stadium_manager import StadiumManager
+from managers.stadium_manager import StadiumManager
 from models.stadium import Stadium
 from models.swimming_pool import SwimmingPool
 from models.ice_palace_of_sport import IcePalaceOfSport

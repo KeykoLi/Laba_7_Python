@@ -4,7 +4,7 @@ from models.abstract_stadium import AbstractStadium
 
 
 class Stadium(AbstractStadium):
-    """Class representing a stadium"""
+    """Class representing stadium"""
 
     # pylint: disable = (too-many-arguments)
     def __init__(self, name, capacity, current_attendance, home_team="empty", away_team="empty",

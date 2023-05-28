@@ -3,8 +3,9 @@ from models.abstract_stadium import AbstractStadium
 
 
 class Gym(AbstractStadium):
-    """Class representing a gym"""
-    #pylint: disable = (too-many-arguments)
+    """Class representing  gym"""
+
+    # pylint: disable = (too-many-arguments)
     def __init__(self, name="empty", capacity=0, current_attendance=0, number_of_shower_rooms=0,
                  square=0, volleyball=False, basketball=False,
                  handball=False, karate=False):
