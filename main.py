@@ -37,5 +37,22 @@ if __name__ == "__main__":
     for complex2 in filter_list_capacity:
         print(complex2)
 
-    sm = SetManager(manager)
-    print(len(sm))
+    print(f"\n\tResult abstract method : \n {manager.get_result_abstract_method()}")
+
+    print(f"\n\tIndex with value : \n {manager.get_enumerated_objects()}")
+
+    print(f"\n\t Zip:")
+    for obj in manager.get_zipping():
+        print(obj)
+
+    std = Stadium("Spartac", 29000, 23500, "Shahtar", "Dynamo",
+                  True, True, True, True)
+    print(std.get_attributes_by_type(bool))
+    set_manager = SetManager(manager)
+    for item in set_manager:
+        print(item)
+
+    print(len(set_manager))
+
+    item = set_manager[157]
+    print(item)

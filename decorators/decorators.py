@@ -12,7 +12,6 @@ def method_name_decorator(function):
 
     return print_name
 
-
 def pylint_decorator(function):
     """ The decorator, using the subprocess module, launches the console command
     "pylint, nazvafaylu" where the file name is the file in which the method is located."""
@@ -21,7 +20,7 @@ def pylint_decorator(function):
         module_name = function.__module__
         file_name = module_name.replace(".", "/") + ".py"
         command = f"pylint {file_name}"
-        subprocess.run(command, check=True)
+        subprocess.run(command, text=True)
         return function(*args, **kwargs)
 
     return pylint
