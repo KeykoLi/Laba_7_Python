@@ -1,9 +1,10 @@
 """Module main"""
-from manager.stadium_manager import StadiumManager
+from managers.stadium_manager import StadiumManager
 from models.stadium import Stadium
 from models.swimming_pool import SwimmingPool
 from models.ice_palace_of_sport import IcePalaceOfSport
 from models.gym import Gym
+from managers.set_stadium_manager import SetManager
 import constant
 
 if __name__ == "__main__":
@@ -35,3 +36,6 @@ if __name__ == "__main__":
                             find_all_more_capacity_than(constant.FILTER_CAPACITY))
     for complex2 in filter_list_capacity:
         print(complex2)
+
+    sm = SetManager(manager)
+    print(len(sm))

@@ -3,7 +3,7 @@ from models.abstract_stadium import AbstractStadium
 
 
 class IcePalaceOfSport(AbstractStadium):
-    """Class representing a ice palace of sport"""
+    """Class representing  ice palace of sport"""
 
     # pylint: disable = (too-many-arguments)
     def __init__(self, name="empty", capacity=0, current_attendance=0, cover=False,
@@ -14,6 +14,8 @@ class IcePalaceOfSport(AbstractStadium):
         self.curling = curling
         self.hockey = hockey
         self.figure_skating = figure_skating
+
+    set_facilities = {"ice rink", "hockey nets", "locker rooms"}
 
     __instance = None
 

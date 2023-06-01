@@ -1,4 +1,5 @@
 """Module of constant"""
+
 from typing import Final
 
 DECREASE: Final[int] = 100
