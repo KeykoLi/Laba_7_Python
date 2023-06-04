@@ -54,5 +54,8 @@ if __name__ == "__main__":
 
     print(len(set_manager))
 
-    item = set_manager[157]
+    item = set_manager[1]
     print(item)
+
+    std.change_home_team("Dynamo")
+    std.change_away_team("Shahtar")

@@ -37,7 +37,7 @@ class StadiumManager:
         raise IndexError(default)
 
     def __iter__(self):
-        return self
+        return iter(self.sport_complex_list)
 
     @method_name_decorator
     def get_result_abstract_method(self):
