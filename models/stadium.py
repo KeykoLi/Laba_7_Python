@@ -1,6 +1,8 @@
 """Module that stores model of stadium"""
 import constant
 from models.abstract_stadium import AbstractStadium
+from exceptions.teams_name_exc import SameTeamsNameException
+from decorators.decorators import logged
 
 
 class Stadium(AbstractStadium):
@@ -31,13 +33,22 @@ class Stadium(AbstractStadium):
         if self.current_attendance > constant.DECREASE:
             self.current_attendance -= constant.DECREASE
 
+
+    @logged(SameTeamsNameException, "file")
     def change_home_team(self, team_name):
         """Method  that change name of home team to other"""
-        self.home_team = team_name
+        if self.away_team == team_name:
+            raise SameTeamsNameException
+        else:
+            self.home_team = team_name
 
+    @logged(SameTeamsNameException, "console")
     def change_away_team(self, team_name):
         """Method  that change name of away team to other"""
-        self.away_team = team_name
+        if self.home_team == team_name:
+            raise SameTeamsNameException
+        else:
+            self.away_team = team_name
 
     @staticmethod
     def get_instance():

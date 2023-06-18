@@ -1,6 +1,6 @@
 """Module that stores and filters objects"""
 
-from decorators.decorators import method_name_decorator
+from decorators.decorators import method_name_decorator, pylint_decorator
 
 
 class StadiumManager:
@@ -22,6 +22,7 @@ class StadiumManager:
         filter_list = filter(lambda complexes: complexes.capacity > capacity,
                              self.sport_complex_list)
         return filter_list
+
 
     def __len__(self):
         return len(self.sport_complex_list)
@@ -45,7 +46,7 @@ class StadiumManager:
                   for sport_complex in self.sport_complex_list]
         return result
 
-    @method_name_decorator
+    @pylint_decorator
     def get_enumerated_objects(self):
         """Returns a concatenation of each object with its index in the list"""
         result = [f"Index => {index}   value => {sport_complex}"
